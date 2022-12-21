@@ -39,7 +39,7 @@
                 </div>
             </div>
 
-            <button><a href="{{route('admin.index')}}">Admin</a></button>
+            <button><a href="{{route('comics.index')}}">Admin</a></button>
 
         </div>
     </main>

@@ -1,6 +1,38 @@
 @import '~bootstrap/scss/bootstrap';
 
+a {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+        color: white;
+    }
+}
 
 table.table.ms_table {
     vertical-align: middle;
+
+
+
+    .type {
+        padding-right: 5rem;
+    }
+
+    .index-buttons button {
+        margin: 0.5rem 0;
+    }
+
+
+}
+
+.series-date-type {
+    span:not(.fw-bold) {
+        display: block;
+        margin: 1rem 0;
+    }
+
+}
+
+.card-img-top.ms_img {
+    object-fit: cover;
 }
