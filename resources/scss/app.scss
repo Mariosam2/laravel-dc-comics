@@ -9,30 +9,47 @@ a {
     }
 }
 
-table.table.ms_table {
-    vertical-align: middle;
+.index {
+    table.table.ms_table {
+        vertical-align: middle;
 
 
 
-    .type {
-        padding-right: 5rem;
+        .type {
+            padding-right: 5rem;
+        }
+
+        .index-buttons button {
+            margin: 0.5rem 0;
+        }
+
+
     }
-
-    .index-buttons button {
-        margin: 0.5rem 0;
-    }
-
-
 }
 
-.series-date-type {
-    span:not(.fw-bold) {
-        display: block;
-        margin: 1rem 0;
+.show {
+    .series-date-type {
+        span:not(.fw-bold) {
+            display: block;
+            margin: 1rem 0;
+        }
+
     }
 
+    .ms_img {
+        width: 100%;
+        height: 500px;
+        object-fit: contain;
+    }
 }
 
-.card-img-top.ms_img {
-    object-fit: cover;
+
+.create {
+    form {
+        input[type="date"] {
+            border-style: solid;
+            border-color: #ced4da;
+            border-width: 1px;
+        }
+    }
 }
