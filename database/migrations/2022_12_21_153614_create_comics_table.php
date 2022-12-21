@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title', 50);
             $table->mediumText('description');
             $table->longText('thumb');
-            $table->unsignedDecimal('price', $scale = 2);
+            $table->float('price', 8, 2);
             $table->string('series', 50);
             $table->date('sale_date');
             $table->string('type', 50);

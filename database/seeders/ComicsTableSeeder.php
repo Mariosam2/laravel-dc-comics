@@ -16,9 +16,17 @@ class ComicsTableSeeder extends Seeder
     public function run()
     {
         $comics = config('comics');
-        foreach ($comics as $key => $comic) {
+        foreach ($comics as $comic) {
             $new_comic = new Comic();
-            $new_comic->$key = $comic[$key];
+            foreach ($comic as $key => $property) {
+                //var_dump($key);
+                //var_dump($comic[$key]);
+                if ($key === 'price') {
+                    $new_comic->$key = floatval($comic[$key]);
+                } else {
+                    $new_comic->$key = $comic[$key];
+                }
+            }
             $new_comic->save();
         }
     }

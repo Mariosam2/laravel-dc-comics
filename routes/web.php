@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ComicsController;
 use App\Http\Controllers\Guest\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,4 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// Guest Routes
 Route::get('/', [PageController::class, 'index']);
+
+//Admin Routes
+Route::resource('admin', ComicsController::class);

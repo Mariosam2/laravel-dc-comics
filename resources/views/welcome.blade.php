@@ -39,6 +39,8 @@
                 </div>
             </div>
 
+            <button><a href="{{route('admin.index')}}">Admin</a></button>
+
         </div>
     </main>
 
