@@ -3,7 +3,7 @@
 @section('content')
 <section class="show">
     <div class="container py-5 min-vh-100">
-        <a href="{{route('comics.index')}}"><button class="btn btn-dark d-block ms-auto">See All Comics </button></a>
+        <a href="{{route('comics.index')}}"><button class="btn btn-dark d-block ms-auto">Back to Comics </button></a>
         <div class="row justify-content-center mt-5">
             <div class="col-4">
                 <img class="ms_img" src="{{$comic->thumb}}" alt="{{$comic->title}}">
