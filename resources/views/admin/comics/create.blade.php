@@ -6,7 +6,7 @@
             <div class="col">
                 <div class="d-flex justify-content-between my-4">
                     <h1>Add a comic</h1>
-                    <a href="{{route('comics.index')}}"><button class="btn btn-dark my-3">See all comics</button></a>
+                    <a href="{{route('comics.index')}}"><button class="btn btn-dark my-3">Back to comics</button></a>
                 </div>
                 <form action="{{route('comics.store')}}" method="POST" class="d-flex flex-wrap p-4 bg-dark text-white rounded-3">
                     @csrf
