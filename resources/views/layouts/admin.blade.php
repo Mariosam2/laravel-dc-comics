@@ -17,7 +17,7 @@
 
 <body>
 
-    <main class="bg-light">
+    <main class="bg-light min-vh-100">
         @yield('content')
     </main>
 

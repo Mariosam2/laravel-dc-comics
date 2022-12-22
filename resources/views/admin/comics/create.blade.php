@@ -5,11 +5,11 @@
 
         <div class="row">
             <div class="col-12 col-md-8">
-                <a href="{{route('comics.index')}}"><button class="btn btn-primary my-4">See All Comics </button></a>
-                <h1>Add a comic</h1>
-                <form action="{{route('comics.store')}}" method="POST" class="d-flex flex-wrap py-4">
+                <a href="{{route('comics.index')}}"><button class="btn btn-dark my-4">See All Comics </button></a>
+                <h1 class="mb-4">Add a comic</h1>
+                <form action="{{route('comics.store')}}" method="POST" class="d-flex flex-wrap p-4 bg-dark text-white rounded-3">
                     @csrf
-                    <div class="w-50 pe-5">
+                    <div class="w-50 p-3 d-flex flex-column align-items-centers">
                         <div class="mb-3">
                             <label for="comic-title" class="form-label">Title</label>
                             <input type="text" name="comic-title" id="comic-title" class="form-control" placeholder="" aria-describedby="helpId">
@@ -31,7 +31,7 @@
                         </div>
 
                     </div>
-                    <div class="w-50 pe-5">
+                    <div class="w-50 p-3 d-flex flex-column align-items-centers">
                         <div class="mb-3">
                             <label for="comic-series" class="form-label">Series</label>
                             <input type="text" name="comic-series" id="comic-series" class="form-control" placeholder="" aria-describedby="helpId">

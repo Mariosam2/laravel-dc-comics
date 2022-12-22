@@ -39,17 +39,17 @@ class ComicsController extends Controller
     public function store(Request $request)
     {
         //dd($request->all());
-        $data = $request->all();
-        $new_comic = new Comic();
-        $new_comic->title = $data['comic-title'];
-        $new_comic->description = $data['comic-description'];
-        $new_comic->thumb = $data['comic-img'];
-        $new_comic->price = $data['comic-price'];
-        $new_comic->series = $data['comic-series'];
-        $new_comic->sale_date = $data['comic-sale-date'];
-        $new_comic->type = $data['comic-type'];
-        $new_comic->save();
-        return redirect()->route('comics.index');
+        $data = [
+            'title' => $request['comic-title'],
+            'description' => $request['comic-description'],
+            'thumb' => $request['comic-img'],
+            'price' => $request['comic-price'],
+            'series' => $request['comic-series'],
+            'sale_date' => $request['comic-sale-date'],
+            'type' => $request['comic-type'],
+        ];
+        Comic::create($data);
+        return to_route('comics.index');
     }
 
     /**
@@ -70,9 +70,9 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Comic $comic)
     {
-        //
+        return view('admin.comics.edit', compact('comic'));
     }
 
     /**
@@ -82,9 +82,19 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $data = [
+            'title' => $request['comic-title'],
+            'description' => $request['comic-description'],
+            'thumb' => $request['comic-img'],
+            'price' => $request['comic-price'],
+            'series' => $request['comic-series'],
+            'sale_date' => $request['comic-sale-date'],
+            'type' => $request['comic-type'],
+        ];
+        $comic->update($data);
+        return to_route('comics.index');
     }
 
     /**
