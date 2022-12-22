@@ -4,7 +4,7 @@
     <div class="container py-5">
         <div class="row">
             <div class="col">
-                <div class="d-flex justify-content-between my-4">
+                <div class="d-flex justify-content-between align-items-center my-4">
                     <h1>Edit a comic</h1>
                     <a href="{{route('comics.index')}}"><button class="btn btn-dark my-3">Back to comics</button></a>
                 </div>
@@ -46,7 +46,7 @@
 
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Edit</button>
+                    <button type="submit" class="btn btn-secondary">Edit</button>
                 </form>
             </div>
         </div>
