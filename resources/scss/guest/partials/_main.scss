@@ -1,0 +1,108 @@
+// Comics view rules
+main {
+    .comics {
+        .container {
+            position: relative;
+
+            .jumbo-tag {
+                position: absolute;
+                top: 0;
+                left: 0;
+                translate: 0 -50%;
+            }
+        }
+
+
+        .comic {
+            img {
+                aspect-ratio: 1/1;
+                width: 100%;
+                object-fit: cover;
+                object-position: center top;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+
+    .buy-more {
+        padding: 3rem;
+
+        .buy-item {
+            img {
+                max-width: 20%;
+                height: 60px;
+                object-fit: contain;
+            }
+
+            span {
+                margin-inline: 1rem;
+            }
+        }
+    }
+
+
+
+}
+
+// Comic view rules
+
+main {
+    .bg-primary.comic-info {
+        height: 80px;
+
+        .container {
+            position: relative;
+
+            .thumb {
+                position: absolute;
+                bottom: 0%;
+                left: 0;
+                translate: 0 15%;
+
+                .thumb-text-top,
+                .thumb-text-bottom {
+                    z-index: 9999;
+                    padding: 0.25rem 0.5rem;
+                    background-color: cornflowerblue;
+                    text-transform: uppercase;
+                }
+
+                .thumb-text-top {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+
+                }
+
+                .thumb-text-bottom {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+
+                }
+            }
+        }
+
+
+    }
+
+    .details {
+        .ms_detail-item {
+            display: flex;
+
+            >*:not(.detail-title) {
+                width: 60%;
+            }
+
+            .detail-title {
+                width: 40%;
+            }
+        }
+    }
+}

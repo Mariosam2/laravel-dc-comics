@@ -1,0 +1,51 @@
+@use './variables' as *;
+
+
+
+.header-top {
+    .item {
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+    }
+}
+
+.btn.ms_btn {
+    border: none;
+
+    &:active {
+        border: none;
+    }
+}
+
+.btn.ms_btn.show {
+    border: none;
+}
+
+.ms_logo {
+    img {
+        max-width: 80px;
+    }
+}
+
+.ms_nav li a {
+    text-transform: uppercase;
+    color: gray;
+    font-weight: 500;
+    border-bottom: 4px solid transparent;
+    padding: 2rem 0;
+
+    &:hover {
+        border-bottom: 4px solid;
+
+    }
+}
+
+.ms_searchbar {
+    border-bottom: 2px solid;
+
+    input.ms_searchtext {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}

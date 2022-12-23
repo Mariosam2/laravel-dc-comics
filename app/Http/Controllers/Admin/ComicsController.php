@@ -48,7 +48,7 @@ class ComicsController extends Controller
             'sale_date' => $request['comic-sale-date'],
             'type' => $request['comic-type'],
         ];
-        Comic::create($data);
+        Comic::make($data)->save();
         return to_route('comics.index');
     }
 

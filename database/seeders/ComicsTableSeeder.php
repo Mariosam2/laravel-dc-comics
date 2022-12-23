@@ -22,9 +22,9 @@ class ComicsTableSeeder extends Seeder
                 //var_dump($key);
                 //var_dump($comic[$key]);
                 if ($key === 'price') {
-                    $new_comic->$key = floatval($comic[$key]);
+                    $new_comic->$key = floatval($property);
                 } else {
-                    $new_comic->$key = $comic[$key];
+                    $new_comic->$key = $property;
                 }
             }
             $new_comic->save();

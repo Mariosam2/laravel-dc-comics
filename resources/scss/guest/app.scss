@@ -1,0 +1,22 @@
+@use './partials/variables' as *;
+
+@use './partials/header';
+@use './partials/jumbo';
+@use './partials/main';
+@use './partials/footer';
+@import '~bootstrap/scss/bootstrap';
+
+// Common rules
+.bg_dark-gray {
+    background-color: $dark-gray;
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+        color: white;
+    }
+}

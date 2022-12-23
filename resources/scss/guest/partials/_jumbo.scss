@@ -1,0 +1,20 @@
+.jumbo {
+    background-image: url(../../img/jumbotron.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 500px;
+
+    .layover {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-color: rgba($color: black, $alpha: 0.4);
+    }
+
+
+
+
+}
