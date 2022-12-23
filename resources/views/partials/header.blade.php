@@ -1,6 +1,8 @@
 <header id="site_header">
-    <section class="header-top bg-primary text-white">
+
+    <section class="header-top bg-primary text-white py-3">
         <div class="container d-flex justify-content-end">
+            <a href="{{route('comics.index')}}" class="btn btn-danger mx-3">Admin Panel</a>
             <div class="item">dc power visa&#8480; and &reg;</div>
             <div class="item">additional dc sites<i class="fa-solid fa-chevron-down ps-2"></i></div>
         </div>
