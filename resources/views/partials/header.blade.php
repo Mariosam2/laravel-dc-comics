@@ -16,9 +16,15 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav flex-grow-1 justify-content-around mt-2 mt-lg-0 ms_nav px-3">
                     @foreach(Config::get('links.nav-links') as $navlink)
+                    @if(empty($navlink['link']))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route($navlink['route'])}}">{{$navlink['title']}}</a>
+                    </li>
+                    @else
                     <li class="nav-item">
                         <a class="nav-link" href="{{$navlink['link']}}">{{$navlink['title']}}</a>
                     </li>
+                    @endif
                     @endforeach
                     <li class="nav-item">
                         <a class="nav-link" href="#" aria-current="page">Shop<i class="fa-solid fa-chevron-down ps-2"></i><span class="visually-hidden">(current)</span></a>

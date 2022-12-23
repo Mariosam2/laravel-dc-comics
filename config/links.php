@@ -7,7 +7,8 @@ return [
         ],
         [
             'title' => 'Comics',
-            'link' => 'guest/comics'
+            'link' => '',
+            'route' => 'guest-comics'
 
         ],
         [

@@ -7,7 +7,7 @@
         <div class="container">
             <div class="thumb">
                 <div class="thumb-text-top text-white">comic book</div>
-                <img class="position-relative" src="{{$comic['thumb']}}" alt="">
+                <img class="position-relative" src="{{$comic->thumb}}" alt="">
                 <div class="thumb-text-bottom text-white">view gallery</div>
             </div>
         </div>
@@ -34,15 +34,15 @@
                     <ul class="list-unstyled list-group">
                         <li class="list-group-item ms_detail-item">
                             <span class="fw-semibold detail-title">Series:</span>
-                            <span class="series">{{$comic['series']}}</span>
+                            <span class="series">{{$comic->series}}</span>
                         </li>
                         <li class="list-group-item ms_detail-item">
                             <span class="fw-semibold detail-title">U.S. Price:</span>
-                            <span class="series">{{$comic['price']}}</span>
+                            <span class="series">{{$comic->price}}</span>
                         </li>
                         <li class="list-group-item ms_detail-item">
                             <span class="fw-semibold detail-title">On Sale Date:</span>
-                            <span class="series">{{$comic['sale_date']}}</span>
+                            <span class="series">{{$comic->sale_date}}</span>
                         </li>
                     </ul>
                 </div>

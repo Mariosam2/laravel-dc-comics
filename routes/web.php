@@ -20,7 +20,9 @@ use Illuminate\Support\Facades\Route;
 // Guest Routes
 Route::get('/', [PageController::class, 'index']);
 Route::get('guest/comics', [GuestComicsController::class, 'index'])->name('guest-comics');
-Route::get('/guest/comics/{$id}', [GuestComicsController::class, 'show($id)'])->name('guest-comic');
+Route::get('guest/comics/{id}', [GuestComicsController::class, 'show'])->name('guest-comic');
+//Route::get('/guest/test', [GuestComicsController::class, 'index']);
+
 
 //Admin Routes
 Route::resource('admin/comics', ComicsController::class);
