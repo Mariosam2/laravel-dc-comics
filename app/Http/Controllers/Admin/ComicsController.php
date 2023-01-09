@@ -43,8 +43,9 @@ class ComicsController extends Controller
     {
         //dd($request->all());
         $val_data = $request->validated();
-        Comic::make($val_data)->save();
-        return to_route('comics.index');
+        $comic = Comic::make($val_data);
+        $comic->save();
+        return to_route('comics.index')->with('message', $comic->title . ' ' . 'has been added successfully');
     }
 
     /**
@@ -81,7 +82,7 @@ class ComicsController extends Controller
     {
         $val_data = $request->validated();
         $comic->update($val_data);
-        return to_route('comics.index');
+        return to_route('comics.index')->with('message', $comic->title . ' ' . 'has been edited successfully');
     }
 
     /**

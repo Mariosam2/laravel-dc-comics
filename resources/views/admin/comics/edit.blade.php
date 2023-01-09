@@ -23,21 +23,21 @@
                     <div class="w-50 p-5 d-flex flex-column align-items-centers">
                         <div class="mb-3">
                             <label for="title" class="form-label">Title</label>
-                            <input type="text" name="title" id="title" class="form-control" placeholder="" aria-describedby="helpId" value="{{old('title', $comic->title)}}">
+                            <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" placeholder="" aria-describedby="helpId" value="{{old('title', $comic->title)}}">
 
                         </div>
                         <div class="mb-3">
-                            <label for="description" class="form-label">Description</label>
+                            <label for="description" class="form-label @error('description') is-invalid @enderror">Description</label>
                             <textarea class="form-control" name="description" id="description" rows="3">{{old('description', $comic->description)}}</textarea>
                         </div>
                         <div class="mb-3">
                             <label for="thumb" class="form-label">Image</label>
-                            <input type="text" name="thumb" id="thumb" class="form-control" placeholder="" aria-describedby="helpId" value="{{old('thumb', $comic->thumb)}}">
+                            <input type="text" name="thumb" id="thumb" class="form-control @error('thumb') is-invalid @enderror" placeholder="" aria-describedby="helpId" value="{{old('thumb', $comic->thumb)}}">
 
                         </div>
                         <div class="mb-3">
                             <label for="price" class="form-label">Price</label>
-                            <input type="text" name="price" id="price" class="form-control" placeholder="" aria-describedby="helpId" value="{{old('price', $comic->price)}}">
+                            <input type="text" name="price" id="price" class="form-control @error('price') is-invalid @enderror" placeholder="" aria-describedby="helpId" value="{{old('price', $comic->price)}}">
 
                         </div>
 
@@ -45,13 +45,13 @@
                     <div class="w-50 p-5 d-flex flex-column align-items-centers">
                         <div class="mb-3">
                             <label for="series" class="form-label">Series</label>
-                            <input type="text" name="series" id="series" class="form-control" placeholder="" aria-describedby="helpId" value="{{old('series', $comic->series)}}">
+                            <input type="text" name="series" id="series" class="form-control @error('series') is-invalid @enderror" placeholder="" aria-describedby="helpId" value="{{old('series', $comic->series)}}">
 
                         </div>
-                        <input type="date" name="sale_date" id="sale_date" class="mb-3 rounded-2 p-1" value="{{$comic->sale_date}}">
+                        <input type="date" name="sale_date" id="sale_date" class="mb-3 rounded-2 p-1 @error('date') is-invalid @enderror" value="{{$comic->sale_date}}">
                         <div class="mb-3">
                             <label for="type" class="form-label">Type</label>
-                            <input type="text" name="type" id="type" class="form-control" placeholder="" aria-describedby="helpId" value="{{old('type', $comic->type)}}">
+                            <input type="text" name="type" id="type" class="form-control @error('type') is-invalid @enderror" placeholder="" aria-describedby="helpId" value="{{old('type', $comic->type)}}">
 
                         </div>
                     </div>

@@ -2,6 +2,9 @@
 @section('content')
 <section class="index">
     <div class="container py-5">
+        @if(!empty(Session::get('message')))
+        <div class="alert alert-success">{{Session::get('message')}}</div>
+        @endif
         <div class="d-flex justify-content-between align-items-center my-3">
             <h1>Admin Control Panel</h1>
             <a href="{{route('comics.create')}}">
