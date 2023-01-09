@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ComicsPostRequest;
+use App\Http\Requests\ComicsUpdateRequest;
 use App\Models\Comic;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ComicsController extends Controller
 {
@@ -36,19 +39,11 @@ class ComicsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ComicsPostRequest $request)
     {
         //dd($request->all());
-        $data = [
-            'title' => $request['comic-title'],
-            'description' => $request['comic-description'],
-            'thumb' => $request['comic-img'],
-            'price' => $request['comic-price'],
-            'series' => $request['comic-series'],
-            'sale_date' => $request['comic-sale-date'],
-            'type' => $request['comic-type'],
-        ];
-        Comic::make($data)->save();
+        $val_data = $request->validated();
+        Comic::make($val_data)->save();
         return to_route('comics.index');
     }
 
@@ -82,18 +77,10 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comic $comic)
+    public function update(ComicsUpdateRequest $request, Comic $comic)
     {
-        $data = [
-            'title' => $request['comic-title'],
-            'description' => $request['comic-description'],
-            'thumb' => $request['comic-img'],
-            'price' => $request['comic-price'],
-            'series' => $request['comic-series'],
-            'sale_date' => $request['comic-sale-date'],
-            'type' => $request['comic-type'],
-        ];
-        $comic->update($data);
+        $val_data = $request->validated();
+        $comic->update($val_data);
         return to_route('comics.index');
     }
 

@@ -2,6 +2,15 @@
 @section('content')
 <section class="edit">
     <div class="container py-5">
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
         <div class="row">
             <div class="col">
                 <div class="d-flex justify-content-between align-items-center my-4">
@@ -13,36 +22,36 @@
                     @method('PUT')
                     <div class="w-50 p-5 d-flex flex-column align-items-centers">
                         <div class="mb-3">
-                            <label for="comic-title" class="form-label">Title</label>
-                            <input type="text" name="comic-title" id="comic-title" class="form-control" placeholder="" aria-describedby="helpId" value="{{$comic->title}}">
+                            <label for="title" class="form-label">Title</label>
+                            <input type="text" name="title" id="title" class="form-control" placeholder="" aria-describedby="helpId" value="{{old('title', $comic->title)}}">
 
                         </div>
                         <div class="mb-3">
-                            <label for="comic-description" class="form-label">Description</label>
-                            <textarea class="form-control" name="comic-description" id="comic-description" rows="3">{{$comic->description}}</textarea>
+                            <label for="description" class="form-label">Description</label>
+                            <textarea class="form-control" name="description" id="description" rows="3">{{old('description', $comic->description)}}</textarea>
                         </div>
                         <div class="mb-3">
-                            <label for="comic-img" class="form-label">Image</label>
-                            <input type="text" name="comic-img" id="comic-img" class="form-control" placeholder="" aria-describedby="helpId" value="{{$comic->thumb}}">
+                            <label for="thumb" class="form-label">Image</label>
+                            <input type="text" name="thumb" id="thumb" class="form-control" placeholder="" aria-describedby="helpId" value="{{old('thumb', $comic->thumb)}}">
 
                         </div>
                         <div class="mb-3">
-                            <label for="comic-price" class="form-label">Price</label>
-                            <input type="text" name="comic-price" id="comic-price" class="form-control" placeholder="" aria-describedby="helpId" value="{{$comic->price}}">
+                            <label for="price" class="form-label">Price</label>
+                            <input type="text" name="price" id="price" class="form-control" placeholder="" aria-describedby="helpId" value="{{old('price', $comic->price)}}">
 
                         </div>
 
                     </div>
                     <div class="w-50 p-5 d-flex flex-column align-items-centers">
                         <div class="mb-3">
-                            <label for="comic-series" class="form-label">Series</label>
-                            <input type="text" name="comic-series" id="comic-series" class="form-control" placeholder="" aria-describedby="helpId" value="{{$comic->series}}">
+                            <label for="series" class="form-label">Series</label>
+                            <input type="text" name="series" id="series" class="form-control" placeholder="" aria-describedby="helpId" value="{{old('series', $comic->series)}}">
 
                         </div>
-                        <input type="date" name="comic-sale-date" id="comic-sale-date" class="mb-3 rounded-2 p-1" value="{{$comic->sale_date}}">
+                        <input type="date" name="sale_date" id="sale_date" class="mb-3 rounded-2 p-1" value="{{$comic->sale_date}}">
                         <div class="mb-3">
-                            <label for="comic-type" class="form-label">Type</label>
-                            <input type="text" name="comic-type" id="comic-type" class="form-control" placeholder="" aria-describedby="helpId" value="{{$comic->type}}">
+                            <label for="type" class="form-label">Type</label>
+                            <input type="text" name="type" id="type" class="form-control" placeholder="" aria-describedby="helpId" value="{{old('type', $comic->type)}}">
 
                         </div>
                     </div>
